@@ -16,17 +16,16 @@ const connect = function() {
 
   conn.on("connect", () => {
     conn.write("Name: 401");
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 50);
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 100);
   });
-  
-  // hard coded moves
-  // conn.on("connect", () => {
-  //   setInterval(() => {
-  //     conn.write("Move: up");
-  //   }, 50);
-  //   setInterval(() => {
-  //     conn.write("Move: up");
-  //   }, 100);
-  // });
+
+  return conn;
+
 };
 
 module.exports = {
