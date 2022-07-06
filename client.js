@@ -14,7 +14,19 @@ const connect = function() {
     console.log(data);
   });
 
-  return conn;
+  conn.on("connect", () => {
+    conn.write("Name: 401");
+  });
+  
+  // hard coded moves
+  // conn.on("connect", () => {
+  //   setInterval(() => {
+  //     conn.write("Move: up");
+  //   }, 50);
+  //   setInterval(() => {
+  //     conn.write("Move: up");
+  //   }, 100);
+  // });
 };
 
 module.exports = {
